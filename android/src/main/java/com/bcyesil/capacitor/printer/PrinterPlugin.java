@@ -166,7 +166,7 @@ public class PrinterPlugin extends Plugin {
             builder.setMediaSize(PrintAttributes.MediaSize.UNKNOWN_LANDSCAPE);
         }
 
-        PrintDocumentAdapter printAdapter = new PdfDocumentAdapter(getContext(), filePath);
+        PrintDocumentAdapter printAdapter = new PdfDocumentAdapter(getContext(), filePath, jobName);
         printManager.print(jobName, printAdapter, builder.build());
     }
 
